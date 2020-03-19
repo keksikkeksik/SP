@@ -1,0 +1,5 @@
+FROM debian
+RUN apt-get -y update && apt-get install -y nano
+RUN touch file.txt && touch file2.txt
+RUN chmod u-w file.txt && chmod u+w file2.txt
+COPY 1.sh .
